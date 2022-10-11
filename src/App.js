@@ -26,6 +26,7 @@ function App() {
     },
     {
       path:'/topics',
+      loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
       element:<Topics></Topics>
     },
     {
@@ -36,13 +37,14 @@ function App() {
       path:'/blog',
       element:<Blog></Blog>
     }
-    ]
-   }
-  ],
-  {
+    ],
+   },
+   {
     path: '*',
     element:<Error></Error>
   }
+  ],
+  
   )
   return (
     <div className="App">
