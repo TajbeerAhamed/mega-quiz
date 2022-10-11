@@ -7,7 +7,7 @@ const Statictics = () => {
     const graph = useLoaderData()
     const graphData= graph.data
     return (
-        <div>
+        <div className='flex flex-col items-center justify-center mt-32'>
          <LineChart
         width={500}
         height={300}
