@@ -8,7 +8,7 @@ const Header = () => {
             <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" className="flex items-center p-2">
       <h1 className='text-white font-bold text-4xl'>Mega Quiz</h1>
             </a>
-            <ul className="items-stretch hidden space-x-3 md:flex">
+            <ul className="'text-white font-bold items-stretch hidden space-x-3 md:flex">
                 <li className="flex">
                   <Link to={'/'}>Home</Link>
                 </li>
