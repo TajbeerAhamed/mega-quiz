@@ -1,4 +1,4 @@
-# Quiz App
+# MEGA-QUIZ
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [Live Site](http://www.github.com/kamrulsaad) to view it in your browser.
+Open [Live Site](https://radiant-torte-db5d2c.netlify.app/) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
@@ -41,8 +41,11 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Features
 
-- This add hass bla bla bla
-- `Another` 
+- First I have created a header and added navbar and some text and img there. 
+- Then in the header i have created some routes and when clicked each routes goes to its component.
+- In the topic section i have loaded some data from api and shows them in UI.
+- Then there added some quiz section and shows the answers.
+- Then shows some rechart and blog in there routes.
 
 
 
