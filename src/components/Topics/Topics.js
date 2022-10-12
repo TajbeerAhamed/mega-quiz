@@ -8,7 +8,7 @@ const Topics = () => {
     const topicsData = topics.data
 
     return (
-        <div className='grid sm:grid-cols-2 md:grid-cols-4 m-10'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-4 justify-between m-10 gap-10'>
             {
                 topicsData.map(topic => <Topic
                     key={topic.id}

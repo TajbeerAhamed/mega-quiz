@@ -8,7 +8,7 @@ const Quiz = ({ topic }) => {
   const [revealAns, setRevealAns] = useState(false)
 
   return (
-    <div className="m-4 border-2 rounded-lg">
+    <div className="m-4 border-2 rounded-lg ">
       <div className='flex justify-between mx-36'>
         <h1 className='font-poppins text-xl mb-4 font-semibold'>{parse(topic.question)}</h1>
         <p className='cursor-pointer' onClick={() => setRevealAns(true)}>

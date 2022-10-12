@@ -7,7 +7,7 @@ const Questions = () => {
     const quiz = useLoaderData()
 
     return (
-        <div>
+        <div className='dark:bg-gray-200 m-5'>
             {
                 quiz?.data?.questions.map(q => <Quiz key={q.id} topic={q}></Quiz>)
             }
