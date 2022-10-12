@@ -8,10 +8,10 @@ const Main = () => {
     const topicsCategories = topicsData.data
     return (
         <div>
-           <TopicDataContext.Provider value={topicsCategories}>
-       <Header></Header>
-       <Outlet></Outlet>
-       </TopicDataContext.Provider>
+            <TopicDataContext.Provider value={topicsCategories}>
+                <Header></Header>
+                <Outlet></Outlet>
+            </TopicDataContext.Provider>
         </div>
     );
 };

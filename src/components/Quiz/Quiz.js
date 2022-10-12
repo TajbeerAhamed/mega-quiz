@@ -1,34 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react'
+import Option from './Option';
+import parse from 'html-react-parser';
 
-const Quiz = ({topic}) => {
-    console.log(topic);
-    return (
-        <div>
-           <div className="m-4 border-2">
-      <h1 className='font-poppins'>{topic.question}</h1>
-      <label htmlFor="1">
-        <p className='font-poppins'>
-          <input  type="radio" name="answer" id="1" /> {topic.options[0]}
+const Quiz = ({ topic }) => {
+
+  const [revealAns, setRevealAns] = useState(false)
+
+  return (
+    <div className="m-4 border-2 rounded-lg">
+      <div className='flex justify-between mx-36'>
+        <h1 className='font-poppins text-xl mb-4 font-semibold'>{parse(topic.question)}</h1>
+        <p className='cursor-pointer' onClick={() => setRevealAns(true)}>
+          Eye
         </p>
-      </label>
-      <label htmlFor="2">
-        <p className='font-poppins'>
-          <input type="radio" name="answer" id="2" /> {topic.options[1]}
-        </p>
-      </label>
-      <label htmlFor="3">
-        <p className='font-poppins'>
-          <input type="radio" name="answer" id="3" /> {topic.options[2]}
-        </p>
-      </label>
-      <label htmlFor="4">
-        <p className='font-poppins'>
-          <input type="radio" name="answer" id="4" /> {topic.options[3]}
-        </p>
-      </label>
-    </div> 
-        </div>
-    );
+      </div>
+      <form className='grid grid-cols-2 gap-y-2 mb-4'>
+        {
+          topic?.options.map((t, index) => <Option revealAns={revealAns} c={topic.correctAnswer} index={index} key={index} t={t}></Option>)
+        }
+      </form>
+    </div>
+  );
 };
 
 export default Quiz;
